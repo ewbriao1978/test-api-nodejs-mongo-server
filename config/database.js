@@ -1,3 +1,4 @@
-export const database =  {
-uri:"mongodb+srv://ewbriao:Eliedu_2005@cluster0.7yaby.mongodb.net/?retryWrites=true&w=majority"
+const database =  {
+uri:"mongodb+srv://ewbriao:lCfnaLL4kXGNRjZc@cluster0.7yaby.mongodb.net/?retryWrites=true&w=majority"
 };
+export default database;

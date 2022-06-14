@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
-const MovieInfoModle = new Schema({
-  title:  String, // 
-  description:String
+const MovieInfoModeldata = new Schema({
+  title:    String, // 
+  overview: String
   
 });
-mongoose.model("movieinfo", MovieInfoModel)
+
+ export const movieInfoModel= mongoose.model("movieinfo", MovieInfoModeldata);
