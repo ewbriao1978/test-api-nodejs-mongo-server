@@ -1,8 +1,9 @@
 import express from "express";
-import { saveMovieInfo } from "../controllers/movieController.js";
+import { saveMovieInfo, getMovieInfo } from "../controllers/movieController.js";
 
 const router = express.Router();
 
 router.post('/',saveMovieInfo);
+router.get('/',getMovieInfo);
 
 export default router;
