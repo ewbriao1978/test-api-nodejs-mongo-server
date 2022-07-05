@@ -41,3 +41,30 @@ export const  saveMovieInfo = async (req,res) => {
     }
    
 }
+
+
+export const deleteMovieInfo = async(req,res) =>{
+    console.log("removing data...");
+    let rest=null;
+    try{
+        const dbs = movieInfoModel.db;
+        const coll = dbs.collection("moviecollection");
+
+        //rest = await coll.find();
+        let rest = await coll.find({}).toArray();
+        console.log("data saved");
+        res.status(200).json({message_success:"Data removed successfully"});
+
+
+        console.log("data sent");
+        
+
+    }catch(error){
+        console.log("Error " + error);
+        res.status(404).json({error: error.message});
+    }
+}
+
+
+
+
